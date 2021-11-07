@@ -11,7 +11,7 @@ import android.widget.EditText;
 import com.example.projectmoprog.MainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
-public class LoginActivity extends AppCompatActivity {
+public class    LoginActivity extends AppCompatActivity {
 
     private EditText etUsername;
     private EditText etPassword;
