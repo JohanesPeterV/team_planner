@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setTitle("Login");
         setTheme(R.style.Theme_ProjectMoprog);
         setContentView(R.layout.activity_login);
 
