@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.projectmoprog.MainActivity;
+import com.example.projectmoprog.models.User;
 import com.google.android.material.snackbar.Snackbar;
 
-public class    LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText etUsername;
     private EditText etPassword;
@@ -33,8 +33,7 @@ public class    LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(validate()){
                     Intent i = new Intent(LoginActivity.this, MainActivity.class );
-                    i.putExtra(MainActivity.EXTRA_USERNAME, etUsername.getText().toString());
-                    i.putExtra(MainActivity.EXTRA_PASSWORD, etPassword.getText().toString());
+                    User.setCurrUser(new User(etUsername.getText().toString(), "temporer email"));
                     startActivity(i);
                 }
                 else{

@@ -20,4 +20,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="login_name_hint">Input Your Name Here</string>
     <string name="login_password_hint">Input Your Password</string>
+    <string name="pager_menu_home">Home</string>
+    <string name="pager_menu_teams">Teams</string>
+    <string name="pager_menu_schedule">Schedule</string>
+    <string name="pager_menu_profile">Profile</string>
 </resources>
