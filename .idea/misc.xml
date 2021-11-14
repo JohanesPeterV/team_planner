@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio_project/binus-moprog/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/AndroidStudio_project/binus-moprog/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/User/Documents/2301864461/Semester 5/Android/Tugas Sblm Uts/binus-moprog/app/src/main/res/drawable-v24/baseline_account_circle_24.xml" value="0.2203125" />
         <entry key="..\:/Users/User/Documents/2301864461/Semester 5/Android/Tugas Sblm Uts/binus-moprog/app/src/main/res/drawable-v24/baseline_category_24.xml" value="0.2203125" />
         <entry key="..\:/Users/User/Documents/2301864461/Semester 5/Android/Tugas Sblm Uts/binus-moprog/app/src/main/res/drawable-v24/baseline_home_20.xml" value="0.2203125" />

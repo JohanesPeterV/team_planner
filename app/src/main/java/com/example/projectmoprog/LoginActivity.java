@@ -16,7 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
-
+    private Button btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,22 +33,40 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(validate()){
                     Intent i = new Intent(LoginActivity.this, MainActivity.class );
-                    User.setCurrUser(new User(etUsername.getText().toString(), "temporer email"));
+                   // User.setCurrUser(new User(etUsername.getText().toString(), "temporer email"));
                     startActivity(i);
                 }
                 else{
-                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Input Credential First!!!", Snackbar.LENGTH_LONG);
-                    snackbar.show();
+
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "User Not Registered!!", Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                        //Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Input Credential First!!!", Snackbar.LENGTH_LONG);
+                        //snackbar.show();
+
                 }
+            }
+        });
+        btnRegister = findViewById(R.id.btn_register);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RegisterActivity.class );
+                startActivity(i);
             }
         });
     }
 
+    //private boolean validate(){
+     //   if(etUsername.getText().toString().equals("")) return false;
+     //   if(etPassword.getText().toString().equals("")) return false;
+   //     else return true;
+   // }
     private boolean validate(){
-        if(etUsername.getText().toString().equals("")) return false;
-        if(etPassword.getText().toString().equals("")) return false;
-        else return true;
-    }
+        if(User.getCurrUser() == null) return false;
+      if(!etUsername.getText().toString().equals(User.getCurrUser().getName().toString())) return false;
+     if(etPassword.getText().toString().equals("")) return false;
+    else return true;
+   }
 
 
 }

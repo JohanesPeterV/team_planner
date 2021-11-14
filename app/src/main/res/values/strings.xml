@@ -24,4 +24,8 @@
     <string name="pager_menu_teams">Teams</string>
     <string name="pager_menu_schedule">Schedule</string>
     <string name="pager_menu_profile">Profile</string>
+    <string name="login_password_hintConfirm">Confirm password</string>
+    <string name="email_register_hint">Input Email</string>
+    <string name="register_name_hint">Input Username</string>
+    <string name="register_password_hint">Input Password</string>
 </resources>
