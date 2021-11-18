@@ -17,13 +17,13 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etPassword;
     private Button btnLogin;
     private Button btnRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Login");
         setTheme(R.style.Theme_ProjectMoprog);
         setContentView(R.layout.activity_login);
-
         etUsername = findViewById(R.id.et_username);
         etPassword = findViewById(R.id.et_password);
 
@@ -37,12 +37,10 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else{
-
                         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "User Not Registered!!", Snackbar.LENGTH_LONG);
                         snackbar.show();
                         //Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Input Credential First!!!", Snackbar.LENGTH_LONG);
                         //snackbar.show();
-
                 }
             }
         });
@@ -56,17 +54,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    //private boolean validate(){
-     //   if(etUsername.getText().toString().equals("")) return false;
-     //   if(etPassword.getText().toString().equals("")) return false;
-   //     else return true;
-   // }
     private boolean validate(){
-        if(User.getCurrUser() == null) return false;
-      if(!etUsername.getText().toString().equals(User.getCurrUser().getName().toString())) return false;
-     if(etPassword.getText().toString().equals("")) return false;
-    else return true;
-   }
+        if(etUsername.getText().toString().equals("")) return false;
+        if(etPassword.getText().toString().equals("")) return false;
+        else return true;
+    }
 
 
 }

@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.profile_menu_item:
                     viewPager.setCurrentItem(3);
                     return true;
-
-
             }
             return false;
         });
