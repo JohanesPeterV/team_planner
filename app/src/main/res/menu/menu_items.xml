@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/home_menu_item"
+        android:icon="@drawable/baseline_home_20"
+        android:title="@string/pager_menu_profile"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/team_menu_item"
+        android:icon="@drawable/baseline_today_24"
+        android:title="@string/pager_menu_teams"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/date_menu_item"
+        android:icon="@drawable/baseline_category_24"
+        android:title="@string/pager_menu_schedule"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/profile_menu_item"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="@string/pager_menu_profile"
+        app:showAsAction="always"/>
+
+</menu>

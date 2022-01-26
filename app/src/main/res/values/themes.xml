@@ -14,12 +14,19 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.ProjectMoprog.SplashScreen" parent="Theme.ProjectMoprog">
+
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowBackground">@drawable/splash_image</item>
+
+    </style>
+
+
     <style name="Theme.ProjectMoprog.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.ProjectMoprog.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.ProjectMoprog.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

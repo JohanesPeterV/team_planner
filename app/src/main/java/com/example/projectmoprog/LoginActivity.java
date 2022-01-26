@@ -8,20 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.projectmoprog.MainActivity;
+import com.example.projectmoprog.models.User;
 import com.google.android.material.snackbar.Snackbar;
 
-public class    LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Login");
+        setTheme(R.style.Theme_ProjectMoprog);
         setContentView(R.layout.activity_login);
-
         etUsername = findViewById(R.id.et_username);
         etPassword = findViewById(R.id.et_password);
 
@@ -31,14 +33,23 @@ public class    LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(validate()){
                     Intent i = new Intent(LoginActivity.this, MainActivity.class );
-                    i.putExtra(MainActivity.EXTRA_USERNAME, etUsername.getText().toString());
-                    i.putExtra(MainActivity.EXTRA_PASSWORD, etPassword.getText().toString());
+                   // User.setCurrUser(new User(etUsername.getText().toString(), "temporer email"));
                     startActivity(i);
                 }
                 else{
-                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Input Credential First!!!", Snackbar.LENGTH_LONG);
-                    snackbar.show();
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "User Not Registered!!", Snackbar.LENGTH_LONG);
+                        snackbar.show();
+                        //Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Input Credential First!!!", Snackbar.LENGTH_LONG);
+                        //snackbar.show();
                 }
+            }
+        });
+        btnRegister = findViewById(R.id.btn_register);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RegisterActivity.class );
+                startActivity(i);
             }
         });
     }
