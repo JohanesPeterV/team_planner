@@ -36,6 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser()!=null){
+
+            String[] names=etEmail.getText().toString().split("@");
+
+            UserRepository.login(new User(names[0], etEmail.getText().toString()));
             Intent i = new Intent(LoginActivity.this, MainActivity.class );
             startActivity(i);
         }
@@ -52,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class );
+
                 startActivity(i);
             }
         });

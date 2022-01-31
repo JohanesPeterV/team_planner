@@ -36,10 +36,12 @@ public class UserRepository {
             team2.addToDo(new ToDo("Todo 12","Todo description 12",12, null, new GregorianCalendar(2022, Calendar.JANUARY, 12).getTime()));
             team2.addToDo(new ToDo("Todo 13","Todo description 13",13, null, new GregorianCalendar(2022, Calendar.JANUARY, 13).getTime()));
 
-
+            user.joinTeam(team1);
+            user.joinTeam(team2);
         }
 
         userList.add(user);
+        currentUser=user;
 
     }
     public static void register(String name, String email){

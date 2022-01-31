@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.mobile_prog.team_planner.R;
 import com.mobile_prog.team_planner.models.ToDo;
+import com.mobile_prog.team_planner.repositories.UserRepository;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class ToDoAdapter extends RecyclerView.Adapter{
@@ -36,20 +38,39 @@ public class ToDoAdapter extends RecyclerView.Adapter{
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-//        Cart currCart = userCart.getCart(position);
-//        LinearLayout cartDesc = holder.itemView.findViewById(R.id.cartDescription);
-//        TextView cartName = cartDesc.findViewById(R.id.checkOutName);
-//        TextView cartPriceQty = cartDesc.findViewById(R.id.checkOutPrice);
-//        Button removeButton = holder.itemView.findViewById(R.id.removeButton);
-//        cartName.setText(currCart.getConsumable().getName());
-//        String priceQty=currCart.getConsumable().getPrice() + " * " + currCart.getQty()+" = "+(currCart.getQty()*currCart.getConsumable().getPrice());
-//        cartPriceQty.setText(priceQty);
-//        removeButton.setOnClickListener(view -> {
-//            userCart.remove(position);
-//            notifyItemRemoved(position);
-//            totalPrice.setText(""+userCart.calculateTotalPrice());
-//
-//        });
+        ToDo currToDo = toDoList.get(position);
+
+        TextView title=holder.itemView.findViewById(R.id.toDoTitle);
+        TextView startDate=holder.itemView.findViewById(R.id.toDoStartDate);
+        TextView description=holder.itemView.findViewById(R.id.toDoDescription);
+        TextView priority=holder.itemView.findViewById(R.id.toDoPriority);
+        TextView status=holder.itemView.findViewById(R.id.toDoStatus);
+        title.setText(currToDo.getTitle());
+        startDate.setText(new SimpleDateFormat("yyyy-mm-dd").format(currToDo.getStartTime()));
+        description.setText(currToDo.getDescription());
+        priority.setText(""+currToDo.getPriority());
+        status.setText(currToDo.getStatus());
+
+        Button doButton=holder.itemView.findViewById(R.id.doButton);
+        if(currToDo.getStatus().equals(ToDo.notStarted)){
+            doButton.setText("Start");
+        }else if(currToDo.getStatus().equals(ToDo.ongoing)&&currToDo.getOccupier().equals(UserRepository.getCurrentUser().getName())){
+            doButton.setText("Done");
+        }
+        else{
+            doButton.setVisibility(View.INVISIBLE);
+        }
+        doButton.setOnClickListener((view)->{
+            if(currToDo.getStatus().equals(ToDo.notStarted)){
+                currToDo.setStatus(ToDo.ongoing);
+                currToDo.setOccupier(UserRepository.getCurrentUser().getName());
+            }else if(currToDo.getStatus().equals(ToDo.ongoing)&&currToDo.getOccupier().equals(UserRepository.getCurrentUser().getName())){
+                currToDo.setStatus(ToDo.done);
+            }
+            else{
+                doButton.setVisibility(View.INVISIBLE);
+            }
+        });
 
     }
 
