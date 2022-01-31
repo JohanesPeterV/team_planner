@@ -8,8 +8,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.util.Log;
 
-import com.example.projectmoprog.R;
+import com.mobile_prog.team_planner.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         {
             add(R.id.home_menu_item);
             add(R.id.team_menu_item);
-//            add(R.id.date_menu_item);
             add(R.id.profile_menu_item);
         }
     };
@@ -82,12 +82,15 @@ public class MainActivity extends AppCompatActivity {
         public Fragment createFragment(int position) {
             Fragment currentFragment = new HomeFragment();
             switch (position) {
+                case 0:
+                    currentFragment=new HomeFragment();
+                    break;
                 case 1:
-                    new HomeFragment();
+                    currentFragment=new HomeFragment();
+                    break;
                 case 2:
-                    new HomeFragment();
-                case 3:
-                    new HomeFragment();
+                    currentFragment=new UserProfileFragment();
+                    break;
             }
             return currentFragment;
         }

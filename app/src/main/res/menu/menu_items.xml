@@ -6,8 +6,8 @@
     <item
         android:id="@+id/home_menu_item"
         android:icon="@drawable/baseline_home_20"
-        android:title="@string/pager_menu_profile"
-        app:showAsAction="always"/>
+        android:title="@string/pager_menu_home"
+        app:showAsAction="always" />
     <item
         android:id="@+id/team_menu_item"
         android:icon="@drawable/baseline_today_24"

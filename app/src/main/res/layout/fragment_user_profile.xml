@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailCurhatLoadIndicator"
+        app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Profile"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_text_view">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/primary_light"
+                        android:paddingBottom="20dp"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/user_profile_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            android:textSize="20sp"
+                            app:layout_constraintEnd_toEndOf="@+id/user_profile_name"
+                            app:layout_constraintStart_toStartOf="@+id/user_profile_name"
+                            app:layout_constraintTop_toBottomOf="@+id/user_profile_name" />
+
+
+                        <TextView
+                            android:id="@+id/user_profile_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Name"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toEndOf="@+id/userTextViewOnly"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/userTextViewOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="8dp"
+                            android:text="UserName "
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/emailTextViewOnly"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="@+id/userTextViewOnly"
+                            app:layout_constraintTop_toBottomOf="@+id/userTextViewOnly" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!--        <androidx.recyclerview.widget.RecyclerView-->
+                <!--            android:id="@+id/recyclerView"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="36dp"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintHorizontal_bias="0.0"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/recyclerView2" />-->
+
+
+                <Button
+                    android:id="@+id/log_out_button"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="0dp"
+                    android:backgroundTint="@color/dark_red"
+                    android:text="Log Out"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

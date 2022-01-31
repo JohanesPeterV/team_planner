@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.projectmoprog.R;
+import com.mobile_prog.team_planner.R;
 
 public class HomeFragment extends Fragment {
     @Nullable

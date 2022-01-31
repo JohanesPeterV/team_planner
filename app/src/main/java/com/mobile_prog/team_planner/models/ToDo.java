@@ -9,6 +9,10 @@ public class ToDo {
     private String occupier;
     private Date startTime;
     private Date endTime;
+    private String status;
+    public static String notStarted="Not Started Yet";
+    public static String ongoing="Ongoing";
+    public static String done="Done";
 
     public ToDo(String title, String description, int priority, String occupier, Date startTime, Date endTime) {
         this.title = title;
@@ -17,6 +21,16 @@ public class ToDo {
         this.occupier = occupier;
         this.startTime = startTime;
         this.endTime = endTime;
+        this.status=notStarted;
+    }
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Date getStartTime() {

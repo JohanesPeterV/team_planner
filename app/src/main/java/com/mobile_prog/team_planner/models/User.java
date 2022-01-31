@@ -7,24 +7,20 @@ public class User {
     private String name;
     private String email;
     private ArrayList<Team> teamArrayList;
-    private static User currUser;
 
     public User(String name, String email, ArrayList<Team> teamArrayList) {
         this.name = name;
         this.email = email;
         this.teamArrayList = teamArrayList;
     }
-
+    public void joinTeam(Team team){
+        if(!teamArrayList.contains(team)) teamArrayList.add(team);
+    }
     public User(String name, String email) {
         this.name = name;
         this.email = email;
-    }
 
-    public static User getCurrUser(){
-        return currUser;
-    }
-    public static void setCurrUser(User currUser){
-        User.currUser=currUser;
+        this.teamArrayList = new ArrayList<Team>();
     }
 
 

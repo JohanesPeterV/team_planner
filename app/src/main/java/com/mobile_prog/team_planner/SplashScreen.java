@@ -7,7 +7,7 @@ import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.projectmoprog.R;
+import com.mobile_prog.team_planner.R;
 
 public class SplashScreen extends AppCompatActivity {
 
