@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".RegisterActivity">
+    tools:context="com.mobile_prog.team_planner.RegisterActivity">
 
     <ImageView
 

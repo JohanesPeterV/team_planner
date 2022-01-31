@@ -1,4 +1,4 @@
-package com.example.projectmoprog;
+package com.mobile_prog.team_planner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.projectmoprog.models.User;
+import com.mobile_prog.team_planner.models.User;
+
+import com.example.projectmoprog.R;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RegisterActivity extends AppCompatActivity {

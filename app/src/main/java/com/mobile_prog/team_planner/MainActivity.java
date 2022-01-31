@@ -1,16 +1,15 @@
-package com.example.projectmoprog;
+package com.mobile_prog.team_planner;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.view.View;
 
+import com.example.projectmoprog.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         {
             add(R.id.home_menu_item);
             add(R.id.team_menu_item);
-            add(R.id.date_menu_item);
+//            add(R.id.date_menu_item);
             add(R.id.profile_menu_item);
         }
     };
@@ -50,11 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.team_menu_item:
                     viewPager.setCurrentItem(1);
                     return true;
-                case R.id.date_menu_item:
-                    viewPager.setCurrentItem(2);
-                    return true;
                 case R.id.profile_menu_item:
-                    viewPager.setCurrentItem(3);
+                    viewPager.setCurrentItem(2);
                     return true;
             }
             return false;
@@ -92,15 +88,13 @@ public class MainActivity extends AppCompatActivity {
                     new HomeFragment();
                 case 3:
                     new HomeFragment();
-                case 4:
-                    new HomeFragment();
             }
             return currentFragment;
         }
 
         @Override
         public int getItemCount() {
-            return 4;
+            return 3;
         }
     }
 }

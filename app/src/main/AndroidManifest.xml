@@ -4,14 +4,14 @@
 
     <application android:theme="@style/Theme.ProjectMoprog">
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.mobile_prog.team_planner.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name="com.mobile_prog.team_planner.SplashScreen"
             android:exported="true"
             android:label="TODOIST " />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.mobile_prog.team_planner.LoginActivity"
             android:allowBackup="true"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.mobile_prog.team_planner.MainActivity"
             android:exported="false" />
     </application>
 

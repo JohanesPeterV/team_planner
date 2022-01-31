@@ -1,4 +1,4 @@
-package com.example.projectmoprog.models;
+package com.mobile_prog.team_planner.models;
 
 import java.util.Date;
 
