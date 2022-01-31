@@ -8,19 +8,17 @@ public class ToDo {
     private int priority;
     private String occupier;
     private Date startTime;
-    private Date endTime;
     private String status;
     public static String notStarted="Not Started Yet";
     public static String ongoing="Ongoing";
     public static String done="Done";
 
-    public ToDo(String title, String description, int priority, String occupier, Date startTime, Date endTime) {
+    public ToDo(String title, String description, int priority, String occupier, Date startTime) {
         this.title = title;
         this.description = description;
         this.priority = priority;
         this.occupier = occupier;
         this.startTime = startTime;
-        this.endTime = endTime;
         this.status=notStarted;
     }
 
@@ -41,13 +39,6 @@ public class ToDo {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
-    }
 
     public String getTitle() {
         return title;
