@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.huawei.hms.ads.HwAds;
 import com.mobile_prog.team_planner.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,9 +33,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setTitle("Team Planner");
 
         setContentView(R.layout.activity_main);
+
+        HwAds.init(this);
         setMenuListener();
         setViewPager();
     }

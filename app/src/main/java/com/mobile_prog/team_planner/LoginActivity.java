@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.huawei.hms.ads.HwAds;
 import com.mobile_prog.team_planner.models.User;
 import com.mobile_prog.team_planner.repositories.UserRepository;
 
@@ -28,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setTheme(R.style.Theme_ProjectMoprog);
         setTitle("Login");
@@ -36,14 +38,12 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser()!=null){
-
-            String[] names=etEmail.getText().toString().split("@");
-
-            UserRepository.login(new User(names[0], etEmail.getText().toString()));
+            String email=mAuth.getCurrentUser().getEmail();
+            String[] names=email.split("@");
+            UserRepository.login(new User(names[0], email));
             Intent i = new Intent(LoginActivity.this, MainActivity.class );
             startActivity(i);
         }
-
         btnLogin = findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this, RegisterActivity.class );
-
                 startActivity(i);
             }
         });

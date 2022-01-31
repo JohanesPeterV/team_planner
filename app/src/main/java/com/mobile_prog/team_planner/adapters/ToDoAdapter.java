@@ -70,6 +70,7 @@ public class ToDoAdapter extends RecyclerView.Adapter{
             else{
                 doButton.setVisibility(View.INVISIBLE);
             }
+            notifyItemChanged(position);
         });
 
     }
