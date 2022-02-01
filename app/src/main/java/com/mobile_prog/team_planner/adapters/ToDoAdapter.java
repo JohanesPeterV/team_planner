@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mobile_prog.team_planner.R;
+import com.mobile_prog.team_planner.models.Team;
 import com.mobile_prog.team_planner.models.ToDo;
 import com.mobile_prog.team_planner.repositories.UserRepository;
 

@@ -1,26 +1,24 @@
 package com.mobile_prog.team_planner;
 
+
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import com.google.firebase.auth.FirebaseAuth;
-import com.huawei.hms.ads.AdListener;
 import com.huawei.hms.ads.AdParam;
-import com.huawei.hms.ads.BannerAdSize;
-import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.ads.banner.BannerView;
 import com.mobile_prog.team_planner.models.User;
 import com.mobile_prog.team_planner.repositories.UserRepository;
 
 public class UserProfileFragment extends Fragment {
+    private static final String DOMAIN_URI_PREFIX = "https://applinkingtest.drcn.agconnect.link";
+    private static final String DEEP_LINK = "https://developer.huawei.com/consumer/cn/doc/development/AppGallery-connect-Guides";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +35,8 @@ public class UserProfileFragment extends Fragment {
 //        bannerView.setAdId("testw6vs28auh3");
 //        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_360_57);
         // Set the refresh interval to 60 seconds.
+
+
         bannerView.setBannerRefresh(60);
 
         AdParam adParam = new AdParam.Builder().build();
@@ -51,6 +51,10 @@ public class UserProfileFragment extends Fragment {
             FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
             firebaseAuth.signOut();
         });
+
+
         return rootView;
     }
+
+
 }

@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     currentFragment=new HomeFragment();
                     break;
                 case 1:
-                    currentFragment=new HomeFragment();
+                    currentFragment=new TeamFragment();
                     break;
                 case 2:
                     currentFragment=new UserProfileFragment();
