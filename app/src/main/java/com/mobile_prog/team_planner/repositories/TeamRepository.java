@@ -1,10 +1,8 @@
 package com.mobile_prog.team_planner.repositories;
 
 import com.mobile_prog.team_planner.models.Team;
-import com.mobile_prog.team_planner.models.ToDo;
 import com.mobile_prog.team_planner.models.User;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 

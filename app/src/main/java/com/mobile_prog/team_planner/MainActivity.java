@@ -8,7 +8,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.huawei.hms.ads.HwAds;
 import com.mobile_prog.team_planner.R;

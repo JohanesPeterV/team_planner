@@ -1,11 +1,7 @@
 package com.mobile_prog.team_planner;
 
 
-<<<<<<< HEAD
 import android.os.Bundle;
-=======
-import android.util.Log;
->>>>>>> b213ddb082cccb4d08cd1330a04e22fa1bf3919f
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

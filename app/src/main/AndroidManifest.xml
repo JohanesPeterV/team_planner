@@ -11,6 +11,7 @@
     <application android:theme="@style/Theme.ProjectMoprog"
         android:usesCleartextTraffic="true"
         android:name="com.mobile_prog.AdsHuawei"
+        android:label="TeamPlanner"
         >
         <activity
             android:name="com.mobile_prog.team_planner.RegisterActivity"
@@ -18,7 +19,7 @@
         <activity
             android:name="com.mobile_prog.team_planner.SplashScreen"
             android:exported="true"
-            android:label="TODOIST " />
+            android:label="TeamPlanner" />
         <activity
             android:name="com.mobile_prog.team_planner.LoginActivity"
             android:allowBackup="true"
