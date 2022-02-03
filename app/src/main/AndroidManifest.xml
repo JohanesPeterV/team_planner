@@ -3,7 +3,8 @@
     package="com.mobile_prog.team_planner">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <application android:theme="@style/Theme.ProjectMoprog"
+    <application
+        android:theme="@style/Theme.ProjectMoprog"
         android:usesCleartextTraffic="true"
         android:name="com.mobile_prog.AdsHuawei"
         >
