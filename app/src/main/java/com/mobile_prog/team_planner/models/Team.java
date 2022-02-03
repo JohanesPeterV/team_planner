@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class Team {
 
+
     private String name;
     private String description;
     private Date dateOfCreation;
@@ -16,6 +17,7 @@ public class Team {
     public void getToDo(int index){
         toDoArrayList.get(index);
     }
+
     public boolean validatePassword(String password){
         if(this.password.equals(password))return true;
         return false;

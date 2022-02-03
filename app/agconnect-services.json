@@ -1,47 +1,47 @@
 {
-	"agcgw_all":{
-		"CN":"connect-drcn.dbankcloud.cn",
-		"CN_back":"connect-drcn.hispace.hicloud.com",
-		"DE":"connect-dre.dbankcloud.cn",
-		"DE_back":"connect-dre.hispace.hicloud.com",
-		"RU":"connect-drru.dbankcloud.cn",
-		"RU_back":"connect-drru.hispace.hicloud.com",
-		"SG":"connect-dra.dbankcloud.cn",
-		"SG_back":"connect-dra.hispace.hicloud.com"
-	},
-	"client":{
-		"cp_id":"2640062000021171184",
-		"product_id":"737518067794448689",
-		"client_id":"816422742814376896",
-		"client_secret":"B897896A71D64A76272EAB03D43AA1E7C19A00A4BBCBAA98E66DD6E06124E581",
-		"project_id":"737518067794448689",
-		"app_id":"105468041",
-		"api_key":"DAEDAA1+0cwweS0O0RhjN/Ru/qpcornAKCN/jgPTNKnOlDGDQ7hpu7hc2Jf6FG/lhbsCQU+mkL9pkV2Vw0/ZAFUIpcI184GDjo1AyA==",
-		"package_name":"mobile_prog.team_planner"
-	},
-	"oauth_client":{
-		"client_id":"105468041",
-		"client_type":1
-	},
-	"app_info":{
-		"app_id":"105468041",
-		"package_name":"mobile_prog.team_planner"
-	},
-	"configuration_version":"3.0",
-	"appInfos":[
-		{
-			"package_name":"mobile_prog.team_planner",
-			"client":{
-				"app_id":"105468041"
-			},
-			"app_info":{
-				"package_name":"mobile_prog.team_planner",
-				"app_id":"105468041"
-			},
-			"oauth_client":{
-				"client_type":1,
-				"client_id":"105468041"
-			}
-		}
-	]
+  "agcgw_all": {
+    "CN": "connect-drcn.dbankcloud.cn",
+    "CN_back": "connect-drcn.hispace.hicloud.com",
+    "DE": "connect-dre.dbankcloud.cn",
+    "DE_back": "connect-dre.hispace.hicloud.com",
+    "RU": "connect-drru.dbankcloud.cn",
+    "RU_back": "connect-drru.hispace.hicloud.com",
+    "SG": "connect-dra.dbankcloud.cn",
+    "SG_back": "connect-dra.hispace.hicloud.com"
+  },
+  "client": {
+    "cp_id": "2640062000021171184",
+    "product_id": "737518067794448689",
+    "client_id": "816422742814376896",
+    "client_secret": "B897896A71D64A76272EAB03D43AA1E7C19A00A4BBCBAA98E66DD6E06124E581",
+    "project_id": "737518067794448689",
+    "app_id": "105468041",
+    "api_key": "DAEDAA1+0cwweS0O0RhjN/Ru/qpcornAKCN/jgPTNKnOlDGDQ7hpu7hc2Jf6FG/lhbsCQU+mkL9pkV2Vw0/ZAFUIpcI184GDjo1AyA==",
+    "package_name": "mobile_prog.team_planner"
+  },
+  "oauth_client": {
+    "client_id": "105468041",
+    "client_type": 1
+  },
+  "app_info": {
+    "app_id": "105468041",
+    "package_name": "mobile_prog.team_planner"
+  },
+  "configuration_version": "3.0",
+  "appInfos": [
+    {
+      "package_name": "mobile_prog.team_planner",
+      "client": {
+        "app_id": "105468041"
+      },
+      "app_info": {
+        "package_name": "mobile_prog.team_planner",
+        "app_id": "105468041"
+      },
+      "oauth_client": {
+        "client_type": 1,
+        "client_id": "105468041"
+      }
+    }
+  ]
 }

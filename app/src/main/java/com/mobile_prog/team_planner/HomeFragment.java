@@ -1,7 +1,6 @@
 package com.mobile_prog.team_planner;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mobile_prog.team_planner.R;
 import com.mobile_prog.team_planner.adapters.ToDoAdapter;
-import com.mobile_prog.team_planner.repositories.TeamRepository;
 import com.mobile_prog.team_planner.repositories.ToDoRepository;
 
 public class HomeFragment extends Fragment {

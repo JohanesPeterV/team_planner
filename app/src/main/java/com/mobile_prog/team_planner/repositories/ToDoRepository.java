@@ -1,11 +1,8 @@
 package com.mobile_prog.team_planner.repositories;
 
-import android.util.Log;
-
 import com.mobile_prog.team_planner.models.Team;
 import com.mobile_prog.team_planner.models.ToDo;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ToDoRepository {

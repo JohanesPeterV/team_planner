@@ -8,7 +8,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.huawei.hms.ads.HwAds;
 import com.mobile_prog.team_planner.R;
@@ -90,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     currentFragment=new HomeFragment();
                     break;
                 case 1:
-                    currentFragment=new HomeFragment();
+                    currentFragment=new TeamFragment();
                     break;
                 case 2:
                     currentFragment=new UserProfileFragment();
